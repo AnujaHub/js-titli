@@ -1,0 +1,27 @@
+body{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#myBtn{
+    padding: 1.5em;
+    background: #e595da;
+    color:rgb(62, 22, 22);
+    text-align: center;
+    font-family:cursive;
+    font-size: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.25s;  
+}
+
+#myBtn:hover{
+    background-color: bisque;
+}
+
+#myLabel{
+    font-size: 10rem;
+}

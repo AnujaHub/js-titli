@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Titli Roller</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    body {
+      background-color: #fff0f5;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    #container {
+      background: #ffe4f1;
+      padding: 2em;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #8b3a62;
+    }
+
+    input {
+      font-size: 1.2rem;
+      width: 80px;
+      text-align: center;
+      margin: 1em;
+      border-radius: 10px;
+      border: 2px solid #e595da;
+    }
+
+    button {
+      background-color: #e595da;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      color: #4d1f1f;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f3b4dc;
+    }
+
+    #messages {
+      font-size: 1.3rem;
+      margin-top: 1em;
+      color: #5a2a4f;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>🎲 Titli Dice of Care</h1>
+    <label>Choose a num between 1-6</label>
+    <input id="numOfDice" type="number" value="1" min="1" max="6" />
+    <button onclick="rollDice()">Roll</button>
+    <div id="messages"></div>
+  </div>
+
+  <script>
+    function rollDice() {
+      const messagesEl = document.getElementById("messages");
+      const numOfDice = document.getElementById("numOfDice").value;
+      const careMsgs = [
+        "🦋 Breathe in. You’ve got this.",
+        "🍫 Treat yourself — maybe chocolate?",
+        "🌧️ Feeling low? Wrap in a cozy blanket.",
+        "🧘 Stretch or meditate for 5 mins.",
+        "🎶 Play your fav song.",
+        "💖 Text your bestie. Feel the love."
+      ];
+
+      let finalMsgs = ""; //declaring an empty string 
+      for (let i = 0; i < numOfDice; i++) {
+        const msg = careMsgs[Math.floor(Math.random() * careMsgs.length)];
+        finalMsgs += `<p>${msg}</p>`;
+      }
+      messagesEl.innerHTML = finalMsgs;
+    }
+  </script>
+</body>
+</html>
