@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptoms/Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="myContainer">
+    <h2 id="heading">How are you feeling today?</h2>
+
+    <div class="option-group">
+      <div class="radio-option">
+        <input type="radio" id="cramps" name="symptom">
+        <label for="cramps">Cramps</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="sad" name="symptom">
+        <label for="sad">Sad</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="irritated" name="symptom">
+        <label for="irritated">Irritated</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="energetic" name="symptom">
+        <label for="energetic">Energetic</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="calm" name="symptom">
+        <label for="calm">Calm</label>
+      </div>
+    </div>
+
+    <button type="submit" id="submitBtn">Get Advice</button>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

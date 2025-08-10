@@ -1,0 +1,30 @@
+body {
+  font-family: cursive;
+  background-color: #fff0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #ffe4f1;
+  padding: 2em;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+input {
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid #e595da;
+  margin-bottom: 1em;
+  text-align: center;
+}
+button {
+  padding: 0.6em 1.2em;
+  background: #e595da;
+  color: #3e1616;
+  border-radius: 30px;
+  cursor: pointer;
+}
